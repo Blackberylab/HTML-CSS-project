@@ -1,0 +1,3398 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "Robbotic Thin";
+    src: url(./assets/fonts/Roboto-Thin.ttf);
+}
+@font-face {
+    font-family: "Robbotic Light";
+    src: url(./assets/fonts/Roboto-Light.ttf);
+}
+@font-face {
+    font-family: "Robbotic Regular";
+    src: url(./assets/fonts/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: "Resfire";
+    src: url(./assets/fonts/Rasfire-Regular.otf);
+}
+
+@font-face {
+    font-family: "Chandra";
+    src: url(./assets/fonts/Marcellus-Regular.ttf);
+}
+button {
+    cursor: pointer;
+}
+
+
+/*inputs*/
+::placeholder {
+    font-size: 1vw;
+    color: #6A6A6A;
+    font-family: "Robbotic Light"; 
+    
+    padding-left: 4%;
+    padding-bottom: 3%;
+}
+input {
+    padding: 2%;
+    
+}
+input:focus {
+    outline: none;
+    border: none;
+}
+
+header, #news, #about-us, footer  {
+    padding-right: 389px;
+    padding-left: 389px;
+
+}
+
+/*Header*/
+header {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+/*Header company-logo*/
+#company-logo {
+    width: 8.3vw;
+    height: auto;
+}
+#company-logo-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+/*Header menu-section*/
+#menu-sections {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    background-color: #FFFFFF;
+    scrollbar-width: none;
+    padding: 0px 82px;
+}
+#menu-sections::-webkit-scrollbar {
+    display: none;
+}
+#menu-sections a {
+    text-decoration: none;
+    padding-right: 2.1vw;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Robbotic Regular";
+    flex-shrink: 0;
+    border: none;
+    outline: none;
+    
+}
+#menu-sections a:hover {
+    color: #EC1C24;
+    text-decoration: underline;
+}
+/*Header response section*/
+#response {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 34px;
+    border-right: solid 1px #E3E3E3;
+    gap: 1.5vw;
+}
+#response-btn {
+    background-color: #FFFFFF;
+    border: solid 1px #6A6A6A;
+    color: #000000;
+    font-family: "Robbotic Regular";
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 50px;
+    padding: 10px 16px; 
+    width: 172px;
+}
+#response-btn:hover {
+    background-color: #F8F8F8;
+    
+}
+#response-images {
+    width: auto;
+    height: auto;
+    display: flex;
+    gap: 0.5vw;
+    justify-content: center;
+    align-items: center;
+}
+#call-image {
+    width: 100%;
+    height: auto;
+}
+#location-image {
+    width: 100%;
+    height: auto;
+}
+#btn-call {
+    background-color: #FFFFFF;
+    border: none;
+    width: 1.5vw;
+}
+#btn-location {
+    background-color: #FFFFFF;
+    border: none;
+    width: 1.5vw;
+}
+.context-dropdown {
+    position: relative;
+    display: inline-block;
+    
+}
+  
+.context-dropdown summary {
+    list-style: none;
+    cursor: pointer;
+    border: none;
+    background: none;
+    
+}
+  
+.context-dropdown summary::-webkit-details-marker {
+    display: none;
+}
+  
+.context-dropdown ul {
+    position: absolute;
+    top: 210%;
+    left: 0;
+    
+    
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 2vh;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    list-style: none;
+    z-index: 10;
+    min-width: 200px;
+}
+
+.context-dropdown ul li {
+    padding-top: 5%;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-bottom: 5%;
+}
+  
+.context-dropdown ul li:hover {
+    background: #f0f0f0;
+}
+  
+.context-dropdown ul li a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    font-size: 0.75vw;
+    font-weight: 500;
+    font-family: "Robbotic Light";
+}
+.context-dropdown span {
+    position: absolute;
+    top: 210%;
+    left: 0;
+    padding-top: 5%;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-bottom: 5%;
+    
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 2vh;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    list-style: none;
+    z-index: 10;
+    min-width: 250px;
+    color: #000;
+    display: block;
+    font-size: 0.75vw;
+    font-weight: 500;
+    font-family: "Robbotic Light";
+    padding: 20% 80%;
+}
+/*Header menu*/
+#main-menu {
+    padding: 2vh 1.1vw;
+    
+}
+
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-button {
+    cursor: pointer;
+    display: inline-block;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.dropdown-content {
+    
+    position: fixed;
+    background-color: #FFFFFF;
+    color: #000000;
+    width: 100vw;
+    top: 40px;
+    left: 0;
+    padding: 0;
+    list-style: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+   
+   
+    z-index: 1000; 
+    margin-top: 3%;
+    
+}
+.content-menu {
+    display: flex;
+    padding: 2% 25% 5%;
+}
+.content-menu-block {
+    padding-right: 8%;
+    
+}
+.content-menu-block span {
+    font-size: 1vw;
+    font-weight: 500;
+    font-family: "Robbotic Regular";
+    padding-bottom: 20%; 
+    display: block;
+}
+.content-menu-block ul {
+    font-size: 1vw;
+    font-weight: 400;
+    font-family: "Robbotic Light";
+    display: block;
+    
+}
+.content-menu-block li {
+    padding-bottom: 5%;
+}
+
+
+
+.content-menu-block ul {
+    
+    text-decoration: none;
+    list-style: none;
+    
+    
+}
+
+.dropdown-content li a:hover {
+    background: #ddd;
+}
+
+
+#menu-toggle:checked + .menu-button + .dropdown-content {
+    display: block;
+}
+
+
+.menu:not(:focus-within) .dropdown-content {
+    display: none;
+}
+.on-mobile {
+    display: none;
+}
+
+
+/*Main*/
+
+
+/*Section-title*/
+#title {
+    background-image: url(./assets/images/wallpapers\ 2.jpg);
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat; 
+    
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    padding: 157px 470px 251px;  
+    text-align: center;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 128px;  
+    font-family: "Robbotic Regular";
+    padding-bottom: 63px;  
+}
+
+#title h3 {
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 28px;  
+    padding-bottom: 38px;  
+}
+#title-img {
+    height: 87px;
+}
+
+#choice {
+    background-color: #FFFFFF;
+    width: fit-content;
+    
+    margin-top: 58px;
+    padding: 12px 24px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-group-dropdown {
+    border-right: solid 1px #D4D4D4;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    text-align: left;
+    width: 151px; 
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.input-group-dropdown label {
+    font-size: 16px;
+    font-weight: 400;
+    color: #A1A1A1;
+    margin-left: 5px;
+    margin-bottom: 3px;
+    
+}
+.input-group-dropdown input::placeholder {
+    color: #000000;
+    font-weight: 500;
+    font-size: 16px;
+}
+.input-group-dropdown input {
+    height: 20px;
+    max-width: 145px;
+    min-width: 100px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.dropdown-wrapper input {
+    background-color: #FFFFFF;
+    border: none;
+    padding: 7px 0px 0px;
+}
+.dropdown-wrapper {
+    position: relative;
+    
+    display: flex;
+    
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    width: 350px;
+    border-radius: 30px;
+    left: -100px;
+    
+}
+/* Открывать dropdown при фокусе input */
+.dropdown-wrapper:focus-within .dropdown-content {
+    display: flex;
+}
+  
+  /* Дополнительно можно открыть при наведении */
+.dropdown-wrapper:hover .dropdown-conten {
+    display: flex;
+}
+.dropdown-main {
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    width: 350px;
+}
+.dropdown-section {
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+    gap: 70px;
+    
+
+}
+.dropdown-section-1 {
+    gap: 10px;
+}
+.dropdown-section h5 {
+    font-size: 16px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.dropdown-content-cards {
+    width: 125px;
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+/* Стилизация каждой радио-опции */
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    text-align: center;
+ 
+
+ 
+  
+}
+
+
+
+
+/* Стилизация самих радиокнопок */
+.radio-option input[type="radio"] {
+    accent-color: #463998;
+    cursor: pointer;
+    width: 15px;
+    height: 20px;
+  
+  
+  
+}
+#btn-choice {
+    background-color: #EC1C24;
+    color: #FFFFFF;
+    width: 168px;
+    height: 40px;
+    
+    border: none;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    font-family: "Robbotic Regular";
+    font-size: 16px; 
+    font-weight: 500;
+}
+.buttons {
+    display: flex;
+    border-top: solid 1px #D4D4D4;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    padding: 20px;
+}
+.reset {
+    border: none;
+    background-color: #FFFFFF;
+    color: #A1A1A1;
+    font-size: 14px;
+    font-weight: 300;
+}
+.choose {
+    background-color: #1C1C1C;
+    border-radius: 30px;
+    padding: 10px 20px;
+    border: none;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 300;
+}
+.choose-img-btn {
+    width: 9px;
+    height: 9px;
+    margin-left: 4px;
+}
+.dropdown-content-2 {
+    width: 650px;
+}
+.dropdown-main-2 {
+    width: 650px;
+}
+.month {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 244px;
+}
+.month h4 {
+    font-size: 16px;
+    font-weight: 500;
+}
+.month a {
+    text-decoration: none;
+    color: #1C1C1C;
+    font-size: 12px;
+    margin: 5px;
+}
+.calendar-dates {
+    display: flex;
+    flex-direction: column;
+}
+.days {
+    
+    display: flex;
+    width: 300px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.numbers {
+    
+    display: flex;
+    width: 240px;
+    flex-wrap: wrap;
+}
+.days div {
+    padding: 3px;
+    width: 33px;
+    height: 33px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+}
+.numbers div {
+    padding:  7px 3px;
+    width: 33px;
+    height: 33px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}  
+
+.numbers div:hover {
+    border: solid 1px #463998;
+    border-radius: 10px;
+}
+.dropdown-content-3 {
+    width: 300px;
+}
+.dropdown-main-3 {
+    width: 300px;
+}
+.dropdown-section-3 {
+    padding: 40px;
+    gap: 0px;
+    flex-wrap: wrap;
+}
+.dropdown-section-3 div {
+    padding: 7px 3px;
+    width: 33px;
+    height: 33px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+  
+}
+.dropdown-section-3 div:hover {
+    border: solid 1px #463998;
+    border-radius: 10px;
+}
+.input-group-dropdown {
+    border-right: solid 1px #D4D4D4;
+}
+#btn-choice:hover {
+    background-color: #DD1A21;
+}
+
+#choice input:nth-child(5) {
+    border-right: none;
+}
+#btn-choice-image {
+    width: clamp(0.5vw, 0.6vw, 1vw);
+    height: auto;
+    margin-left: 0.3vw;
+}
+
+/*Popular tours*/
+#popular-tour {
+    padding-top: 135px;
+    padding-bottom: 123px;
+    padding-left: 399px;
+    position: relative;
+}
+#popular-tour h3 {
+    color: #1C1C1C;
+    font-weight: 500;
+    font-family: "Robbotic Regular";
+    font-size: 44px;
+}
+#popular-tour h4 {
+    color: #1C1C1C;
+    font-weight: 300;
+    font-family: "Robbotic Light";
+    font-size: 24px;
+}
+
+#popular-tour-section {
+    display: flex;
+    overflow-x: auto;
+    background-color: #FFFFFF;
+    scrollbar-width: thin;
+    margin-top: 59px;
+    padding-bottom: 52px;
+    gap: 32px; 
+}
+    
+#popular-tour-section::-webkit-scrollbar {
+    display: none;
+}
+    
+.card-tours {
+    flex: 0 0 auto; 
+    width: 256px;
+    height: 340px;
+    border-radius: 30px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    position: relative;
+    
+}
+
+
+
+
+.card-content-tours {
+    position: relative;
+    
+    z-index: 1;
+}
+  
+.tag {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    padding: 2px 8px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 300;
+    border: solid 1px #FFFFFF;
+    font-family: "Robbotic Light";
+    
+}
+
+.tag.price {
+    left: auto;
+    right: 80px;
+    font-family: "Robbotic Light";
+}
+
+.title {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-family: "Robbotic Regular";
+}
+
+.dates {
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-family: "Robbotic Light";
+}
+
+.link {
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 300;
+    font-family: "Robbotic Light";
+}
+.card-content-info-tours {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.card-img-link {
+    width: 41px;
+}
+
+#tour-image {
+    position: absolute;
+    top: 23%;
+    left: 13%;
+    
+}
+/*section popular hotels*/
+#popular-hotels {
+    background-color: #F8F8F8;
+    padding: 164px 0px 133px;
+    position: relative;
+}
+#popular-hotels h3 {
+    color: #1C1C1C;
+    font-weight: 500;
+    font-family: "Robbotic Regular";
+    font-size: 44px;
+    text-align: center;
+}
+#popular-hotels h4 {
+    color: #1C1C1C;
+    font-weight: 300;
+    font-family: "Robbotic Light";
+    font-size: 24px;
+    text-align: center;
+}
+#popular-hotels-section {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    background-color: #F8F8F8;
+    scrollbar-width: thin;
+    margin-top: 48px;
+    padding: 4vh 2vw 9.7vh 2vw;
+    box-sizing: border-box;
+    scroll-padding: 2vw;
+    gap: 32px;
+}
+.hotel-card {
+    position: relative;
+    flex: 0 0 auto;
+    width: 460px;
+    height: 340px;
+    border-radius: 30px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    color: #FFFFFF;
+}
+  
+  
+.hotel-info {
+    
+    z-index: 1;
+    padding: 35px;
+    width: 100%;
+}
+  
+.hotel-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    font-weight: 500;
+    font-family: "Robbotic Regular";
+}
+  
+.hotel-link {
+    font-family: "Robbotic Light";
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 300;
+}
+.card-img-line {
+    width: 41px;
+}
+  
+.rating {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    z-index: 2;
+    display: flex;
+}
+.rating h5 {
+    font-family: "Chandra";
+    font-size: 65px;
+    font-weight: 400;
+   
+}
+.star-img-card {
+    top: 0px;
+    height: 21px;
+    width: 20px;
+}
+    
+
+#hotels {
+    position: absolute;
+    top: 8%;
+    left: 45%;
+    
+    z-index: 1;
+}
+.hidden-on-laptop {
+    display: none;
+}
+
+/*Section Form*/
+#section-form {
+    background-image: url(./assets/images/valeria-andersson-0IGhARplNzY-unsplash\ 1.jpg);
+    background-size: cover; 
+    background-position: center;        
+    background-repeat: no-repeat; 
+    width: 100%;
+    min-height: 70vh;
+    max-height: 160vh;
+    height: auto;
+    position: relative;
+}
+#form-1 {
+    background-color: #FFFFFF;
+    top: 70%;
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    padding: 64px 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    left: 20%;
+
+}
+#form-title-1 {
+    color: #1C1C1C;
+    font-weight: 400;
+    font-size: 24px;
+    font-family: "Robbotic Regular";
+    margin-right: 80px;
+    width: 20%;
+}
+.form-subtitle {
+    color: #1C1C1C;
+    font-weight: 300;
+    font-size: 16px;
+    font-family: "Robbotic Light";
+    margin-right: 90px;
+}
+.fill-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 80px;
+}
+.fill-form input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px #848484;
+    width: 144px;
+}
+.btn-form {
+    background-color: #EC1C24;
+    color: #FFFFFF;
+    width: 168px;
+    padding: 10px 0vw;
+    border: none;
+    border-radius: 6vh;
+    justify-content: center;
+    align-items: center;
+    font-family: "Robbotic Regular";
+    font-size: 16px;
+    font-weight: 500;
+}
+.btn-form-image {
+    width: 11px;
+    height: auto;
+    margin-left: 11px;
+}
+
+/*Section feedbacks*/
+#feedback {
+    background-color: #FFFFFF;
+    padding-top: 173px;
+    padding-bottom: 123px;
+    position: relative;
+
+}
+#feedback h3 {
+    color: #1C1C1C;
+    font-weight: 500;
+    font-family: "Robbotic Regular";
+    font-size: 44px;
+    text-align: center;
+}
+#feedback h4 {
+    color: #1C1C1C;
+    font-weight: 300;
+    font-family: "Robbotic Light";
+    font-size: 24px;
+    text-align: center;
+}
+#feedback-section {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    background-color: #FFFFFF;
+    margin-top: 72px;
+    padding-bottom: 71px;
+    padding-left: 399px;
+
+}
+.title-feedback-section {
+    width: 1vw;
+    height: 1vh;
+}
+
+#feedback-section img {
+    width: 28vw;
+    height: fit-content;
+    margin-right: 32px;
+}
+#reviews {
+    position: absolute;
+    top: 10%;
+    left: 43%;
+    
+
+}
+/*Section news*/
+
+#news {
+    background-color: #F8F8F8;
+    padding-top: 130px;
+    padding-bottom: 123px;
+    position: relative;
+    
+}
+
+#news h3 {
+    color: #1C1C1C;
+    font-weight: 500;
+    font-family: "Robbotic Regular", sans-serif;
+    font-size: 44px;
+    text-align: left;
+}
+
+#news h4 {
+    color: #1C1C1C;
+    font-weight: 300;
+    font-family: "Robbotic Light", sans-serif;
+    font-size: 24px;
+    text-align: left;
+    display: block;
+    
+}
+
+.news-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-top: 56px;
+    
+    
+    
+}
+
+
+
+#news-image {
+    position: absolute;
+    top: 19%;
+    left: 14%;
+    
+}
+
+.card-news {
+    position: relative;
+    height: 256px;
+    border-radius: 30px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    
+}
+  
+
+  
+.card-content-news {
+    position: relative;
+    color: #FFFFFF;
+    padding: 57px 28px;
+    z-index: 1;
+}
+  
+.card-content-news h3 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #FFFFFF;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: "Robbotic Regular";
+}
+  
+.card-content-news a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #FFFFFF;
+    
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 300;
+    font-family: "Robbotic Light";
+}
+  
+
+.display-on-small {
+    display: none;
+}
+.hidden-on-laptop {
+    display: none;
+}
+
+
+
+
+
+
+.small-displey-1024 {
+    display: none;
+}
+.hidden-on-laptop {
+    display: none;
+}
+
+
+
+/*Section about*/
+#we-image {
+    position: absolute;
+    top: 7%;
+    left: 45.5%;
+}
+#about-us {
+    
+    padding-top: 180px;
+    padding-bottom: 126px;
+    position: relative;
+}
+#about-us h3 {
+    color: #1C1C1C;
+    font-weight: 500;
+    font-family: "Robbotic Regular";
+    font-size: 44px;
+    text-align: center;
+}
+#about-us-subtitle {
+    color: #1C1C1C;
+    font-weight: 300;
+    font-family: "Robbotic Light";
+    font-size: 24px;
+    text-align: center; 
+}
+.text {
+    font-weight: 300;
+    font-family: "Robbotic Light";
+    font-size: 16px;
+    line-height: 162%;
+}
+.text-1 {
+    width: 526px;
+    height: fit-content;
+    padding-bottom: 30%;
+}
+.text-2 {
+    width: 352px;
+    height: fit-content;
+    position: absolute;
+    top: 70%;
+    left: 35%;
+    
+}
+.text-3 {
+    width: 352px;
+    height: fit-content;
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    
+}
+
+.text-1 strong {
+    
+    font-size: 85px;
+    font-family: "Resfire";
+    font-weight: 400;
+    line-height: 1;
+    flex-shrink: 0;
+    display: inline-block;
+    
+}
+#text-about-us {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+#about-us-img-1 {
+    position: absolute;
+    top: 12%;
+    right: -2%;
+    width: 50%;
+    height: auto;
+    border-radius: 30px;
+}
+#about-us-img-1 img {
+    border-radius: 30px;
+}
+#about-us-img-2 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 32%;
+    height: auto;
+    border-radius: 30px;
+}
+.phones {
+    display: none;
+}
+/*Section about contacts*/
+#contacts {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    margin-top: 72px;
+    padding: 39px 46px;
+    align-items: center;
+    text-align: center;
+    border-top: solid 1px #D4D4D4;
+    border-bottom: solid 1px #D4D4D4;
+}
+.contacts-cards {
+    position: relative;
+}
+.contacts-cards h4 {
+    font-weight: 500;
+    color: #1C1C1C;
+    font-size: 24px;
+    font-family: "Robbotic Regular";
+    margin-bottom: 3vh;
+}
+.contacts-cards p {
+    font-weight: 300;
+    font-family: "Robbotic Light";
+    font-size: 16px;
+    margin-bottom: 1vh;
+    
+}
+.contacts-cards:nth-child(2)::before,
+.contacts-cards:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 50%;
+  width: 1px;
+  background-color: #D4D4D4;
+}
+.contacts-cards:nth-child(2)::before {
+    left: 5%;
+    top: 30%;  
+}
+  
+.contacts-cards:nth-child(2)::after {
+    right: -5%; 
+    top: 30%; 
+}
+
+/*section send form*/
+#form-send {
+    background-image: url(./assets/images/Group\ 9.jpg);
+    background-size: cover; 
+    background-position: center;        
+    background-repeat: no-repeat; 
+    width: 100%;
+    min-height: 50vh;
+    max-height: 120vh;
+    height: auto;
+    position: relative;
+}
+#form-2 {
+    background-color: #FFFFFF;
+    top: 40%;
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    padding: 64px 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    left: 20%;
+    
+}
+#form-title-2 {
+    color: #1C1C1C;
+    font-weight: 400;
+    font-size: 1.25vw;
+    font-family: "Robbotic Regular";
+    margin-right: 4.38vw;
+    width: 305px;
+}
+.form-subtitle {
+    color: #1C1C1C;
+    font-weight: 300;
+    font-size: 16px;
+    font-family: "Robbotic Light";
+    margin-right: 90px;
+}
+.fill-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 80px;
+}
+.fill-form input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px #848484;
+    width: 144px;
+}
+.btn-form {
+    background-color: #EC1C24;
+    color: #FFFFFF;
+    width: 168px;
+    padding: 10px 0vw;
+    border: none;
+    border-radius: 6vh;
+    justify-content: center;
+    align-items: center;
+    font-family: "Robbotic Regular";
+    font-size: 16px;
+    font-weight: 500;
+}
+.btn-form-image {
+    width: 11px;
+    height: auto;
+    margin-left: 11px;
+}
+
+/*Footer*/
+footer {
+    background-color: #222222;
+    color: #FFFFFF;
+    padding-top: 53px;
+    padding-bottom: 53px;   
+}
+#footer-title {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 60px;
+    align-items: center;
+}
+#footer-form {
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+    height: fit-content;
+    
+}
+#footer-logo {
+    width: 15%;
+    height: auto;
+}
+#footer-logo-img {
+    width: 100%;
+    height: 100%;
+}
+#footer-form-title {
+    font-weight: 300;
+    font-family: "Robbotic Light";
+    font-size: 14px;
+    padding-top: 2%;
+}
+#footer-form-send {
+    display: flex;
+    height: fit-content;
+    border: 1px solid #FFFFFF;
+    padding: 10px 23px;
+    border-radius: 30px;
+}
+#footer-form-send input {
+    background-color: #222222;
+    border: none;
+}
+#footer-sections {
+    display: flex;
+    justify-content: space-between;
+    padding: 34px 94px;
+    border-top: solid 1px #494949;
+    border-bottom: solid 1px #494949;
+}
+#footer-sections a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: "Robbotic Light";
+}
+#footer-society {
+    display: flex;
+    justify-content: space-between;
+    padding: 39px 345px;
+}
+#footer-bottom {
+    text-align: center;
+    color: #525252;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: "Robbotic Light";
+}
+
+@media screen and (max-width: 1440px) {
+    header, #news, #about-us, footer  {
+        padding-right: 174px;
+        padding-left: 174px;
+    
+    }
+    header {
+        padding: 24px 174px;
+    }
+    #company-logo {
+        width: 159px;
+        height: 58px;
+    }
+    
+    #call-image {
+        width: 26px;
+        height: 26px;
+    }
+    #location-image {
+        width: 26px;
+        height: 26px;
+    }
+    #response-images {
+        gap: 15px;
+    }
+    .news-section img {
+        width: auto;
+        height: clamp(25vh, 20vh, 10vh);
+        
+    }
+    #title {
+        padding: 169px 246px 200px;
+    }
+    #btn-choice-image {
+        width: 11px;
+        height: 11px;
+    }
+
+    #popular-tour {
+        padding-left: 174px;
+    }
+    #tour-image {
+        left: 4%;
+    }
+    #hotels {
+        top: 10%;
+    }
+
+    #section-form {
+        min-height: 87vh;
+        max-height: 100vh;
+    }
+    #form-1 {
+        top: 65%;
+        left: 13%;
+    }
+    #form-title-1 {
+        width: 236px;
+        margin-right: 64px;
+    }
+    .form-subtitle {
+        margin-right: 70px;
+    }
+    .fill-form {
+        margin-right: 75px;
+    }
+    .btn-form-image {
+        width: 11px;
+        height: 11px;
+        margin-left: 5px;
+    }
+    
+    #reviews {
+        width: 250px;
+        left: 41%;
+        top: 11%;
+    }
+
+    #feedback-section {
+        padding-left: 160px;
+    }
+    .news-section img {
+        height: 250px;
+    }
+    .news-section {
+        gap: 30px;
+    }
+    #news-image {
+        width: 179px;
+        left: 5%;
+    }
+    #we-image {
+        width: 133px;
+        top: 8%;
+        left: 45%;
+    }
+    #form-title-2 {
+        width: 250px;
+    }
+    #form-send {
+        min-height: 70vh;
+        max-height: 90vh;
+    }
+    #form-2 {
+        left: 14%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    header, #news, #about-us, footer  {
+        padding-right: 86px;
+        padding-left: 86px;
+    
+    }
+    header {
+        padding: 20px 86px;
+    }
+    #company-logo {
+        width: 159px;
+        height: 58px;
+    }
+    
+    
+    #title {
+        padding: 169px 156px 240px;
+    }
+    #btn-choice-image {
+        width: 11px;
+        height: 11px;
+    }
+
+    #popular-tour {
+        padding-left: 174px;
+    }
+    #tour-image {
+        left: 4%;
+    }
+    #hotels {
+        top: 10%;
+    }
+
+    #section-form {
+        min-height: 87vh;
+        max-height: 100vh;
+    }
+    #form-1 {
+        top: 65%;
+        left: 13%;
+    }
+    #form-title-1 {
+        width: 236px;
+        margin-right: 64px;
+    }
+    .form-subtitle {
+        margin-right: 70px;
+    }
+    .fill-form {
+        margin-right: 75px;
+    }
+    .btn-form-image {
+        width: 11px;
+        height: 11px;
+        margin-left: 5px;
+    }
+    
+    #reviews {
+        width: 250px;
+        left: 41%;
+        top: 11%;
+    }
+
+    #feedback-section {
+        padding-left: 160px;
+    }
+    .news-section img {
+        height: 250px;
+    }
+    .news-section {
+        gap: 30px;
+    }
+    #news-image {
+        width: 149px;
+        left: 2%;
+        top: 21%;
+    }
+    #we-image {
+        width: 133px;
+        top: 8%;
+        left: 45%;
+    }
+    #form-title-2 {
+        width: 200px;
+    }
+    
+
+    
+}
+
+@media screen and (max-width: 1024px)  {
+    ::placeholder {
+        font-size: 1.6vw;
+        
+        padding-left: 2%;
+        
+    }
+    
+    /*Header*/
+    header, #news, #about-us, footer  {
+        padding-right: 48px;
+        padding-left: 48px;
+    
+    }
+
+    header {
+        padding: 21px 48px; 
+    }
+    /*Header company-logo*/
+    #company-logo {
+        width: 159px;
+        height: auto;
+    }
+    /*Header menu-section*/
+    #menu-sections {
+        padding: 0px 0px;
+        width: 35%;
+        margin-right: 86px;
+        margin-left: 88px;
+        
+        
+    }
+    #menu-sections a {
+        padding-right: 30px;
+        font-size: 14px;
+        
+    }
+    /*Header response section*/
+    #response {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 2.5vw;
+        border-right: solid 1px #E3E3E3;
+        gap: 3.8vw;
+    }
+    #response-btn {
+        background-color: #FFFFFF;
+        border: solid 1px #6A6A6A;
+        color: #000000;
+        font-family: "Robbotic Regular";
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 30px;
+        padding: 13px 16px; 
+        line-height: 1.2;
+        width: 162px;
+    }
+    #response-images {
+        
+        height: auto;
+        display: flex;
+        gap: 17px;
+        justify-content: center;
+        align-items: center;
+    }
+    #call-image {
+        width: 26px;
+        height: 26px;
+    }
+    #location-image {
+        width: 26px;
+        height: 26px;
+    }
+    #btn-call {
+        background-color: #FFFFFF;
+        border: none;
+        width: 2.5vw;
+    }
+    #btn-location {
+        background-color: #FFFFFF;
+        border: none;
+        width: 2.5vw;
+    }
+    .context-dropdown ul {
+        position: absolute;
+        top: 200%;
+        left: 0;
+        
+        
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 2vh;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        list-style: none;
+        z-index: 10;
+        min-width: 200px;
+    }
+    
+    .context-dropdown ul li {
+        padding-top: 5%;
+        padding-right: 10%;
+        padding-left: 10%;
+        padding-bottom: 5%;
+    }
+      
+    
+    .context-dropdown ul li a {
+        
+        font-size: 1.2vw;
+        
+    }
+    .context-dropdown span {
+        min-width: 200px;
+        font-size: 1.2vw;
+        left: auto;
+        top: 200%;
+        right: 0;
+        
+    }
+    
+    .content-menu {
+        
+        padding: 2% 20% 5%;
+    }
+    .content-menu-block {
+        padding-right: 9%;
+        
+    }
+    .content-menu-block span {
+        font-size: 1.6vw;
+        
+        padding-bottom: 20%; 
+        
+    }
+    .content-menu-block ul {
+        font-size: 1.4vw;
+        
+        
+    }
+    .content-menu-block li {
+        padding-bottom: 5%;
+    }
+    
+    
+    
+    
+    /*Main*/
+    /*Section-title*/
+    #title {
+        
+        padding: 121px 48px 101px;
+    }
+    h1 {
+        font-size: 92px;
+        padding-bottom: 32px;
+    }
+    
+    #title h3 {
+        font-size: 28px;
+        padding-bottom: 23px;
+    }
+    #title-img {
+        height: 60px;
+    }
+    #choice {
+        margin-top: 68px;
+        padding: 12px 32px;
+        border-radius: 30px;
+    }
+    
+    
+    
+    .input-group-dropdown {
+        width: 130px;
+        
+       
+    }
+    .input-group-dropdown input {
+        width: 120px;
+        height: 20px;
+
+    }
+    .input-group-dropdown  label {
+        width: 130px;
+        font-size: 12px;
+        margin: 0px;
+    }
+    
+    #btn-choice-image {
+        
+        margin-left: 0.5vw;
+    }
+    /*Popular tours*/
+    #popular-tour {
+        padding: 92px 0px 92px 48px;
+    }
+   
+    #tour-image {
+        position: absolute;
+        top: 11%;
+        left: 39%;
+        width: 138px;
+        
+    }
+    /*section popular hotels*/
+    #popular-hotels {
+        padding: 140px 0 85px;
+    }
+    #popular-hotels-section {
+        padding: 6vh 2vw 9.7vh 2vw;
+    }
+    
+   
+    #hotels {
+        top: 8%;
+        left: 43%;
+        width: 172px;
+    }
+    /*Section Form*/
+    #section-form { 
+        min-height: 75vh;
+        max-height: 100vh;
+    }
+    #form-1 {
+        
+        top: 70%;
+        padding: 30px 26px;
+        left: 2%;
+        width: 95%;
+    }
+    #form-title-1 {
+        font-size: 24px;
+        margin-right: 48px;
+        font-weight: 400;
+        width: 236px;
+    }
+    .form-subtitle {
+        font-size: 16px;
+        margin-right: 27px;
+    }
+    .fill-form {
+        gap: 10px;
+        margin-right: 30px;
+    }
+    .fill-form input {
+        width: 144px;
+    }
+    .btn-form {
+        width: 168px;
+        padding: 13px 0vw;
+        border-radius: 30px;
+        font-size: 16px;
+    }
+    
+    /*Section feedbacks*/
+    
+    #feedback-section {
+        padding-left: 5vw;
+    }
+    #feedback-section img {
+        width: 30vw;
+    }
+    #reviews {
+        top: 11%;
+        left: 38%;
+        width: 250зч;
+    }
+    /*Section news*/
+    
+    
+    
+    .news-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+        margin-top: 61px;
+        
+        
+        
+    }
+    .news-section img {
+        width: auto;
+        height: 256px;
+        
+    }
+    
+    #news-image {
+        position: absolute;
+        top:  10%;
+        left: 40%;
+        width: 179px;
+        
+    }
+    
+    
+    .news-section img:nth-child(1) { order: 1; }
+    .news-section img:nth-child(2) { order: 2; }
+    .news-section img:nth-child(3) { order: 6; }
+    .news-section img:nth-child(4) { order: 3; }
+    .news-section img:nth-child(5) { order: 7; }
+    .news-section img:nth-child(6) { order: 5; }
+    .news-section img:nth-child(7) { order: 4; }
+    
+    .small-displey-1024 {
+        display: block;
+    }
+    /*Section about*/
+    #we-image {
+        width: 15%;
+        top: calc(5% - 1vh);
+        left: calc(37% + 5vw);
+    }
+    #about-us {
+        
+        padding-top: 147px;
+        padding-bottom: 100px;
+    }
+   
+    
+    .text {
+        font-weight: 300;
+        font-family: "Robbotic Light";
+        font-size: 16px;
+        line-height: 162%;
+    }
+    .text-1 {
+        width: 526px;
+        height: fit-content;
+        top: 0;
+    }
+    .text-2 {
+        width: 262px;
+        height: fit-content;
+        position: absolute;
+        top: 66%;
+        left: 40%;
+        
+    }
+    .text-3 {
+        width: 262px;
+        height: fit-content;
+        position: absolute;
+        top: 66%;
+        right: 0;
+        
+    }
+    
+    .text-1 strong {
+        
+        font-size: 5.8vw;
+        
+        font-weight: 400;
+        line-height: 1;
+        flex-shrink: 0;
+        display: inline-block;
+        
+    }
+    #text-about-us {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+        
+        height: 780px;
+    }
+    #about-us-img-1 {
+        position: absolute;
+        top: 10%;
+        right: 0;
+        
+        overflow: hidden;   
+        
+        width: 352px;
+        height: 359px;
+        background-position: center;
+        
+    }
+    
+    #about-us-img-1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        display: block;
+        width: 100%;
+        border-radius: 3vh;
+        
+  
+    }
+    #about-us-img-2 {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 352px;
+        height: 340px;
+    }
+    /*Section about contacts*/
+    #contacts {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        margin-top: 12vh;
+        padding: 47px 10px;
+        align-items: center;
+        text-align: center;
+        border-top: solid 1px #D4D4D4;
+        border-bottom: solid 1px #D4D4D4;
+    }
+    .contacts-cards h4 {
+        font-weight: 500;
+        color: #1C1C1C;
+        font-size: 24px;
+        font-family: "Robbotic Regular";
+        margin-bottom: 3vh;
+    }
+    .contacts-cards p {
+        font-weight: 300;
+        font-family: "Robbotic Light";
+        font-size: 16px;
+        margin-bottom: 1vh;
+        
+    }
+    .contacts-cards {
+        align-items: center;
+        justify-content: center;
+    }
+    .social-icons {
+        width: 40%;
+        margin: auto;
+    }
+    /*section send form*/
+    #form-send {
+        background-image: url(./assets/images/Group\ 9.jpg);
+        background-size: cover; 
+        background-position: center;        
+        background-repeat: no-repeat; 
+        width: 100%;
+        min-height: 50vh;
+        max-height: 90vh;
+        height: auto;
+        position: relative;
+    }
+    #form-2 {
+        background-color: #FFFFFF;
+        top: 30%;
+        position: absolute;
+        width: fit-content;
+        height: fit-content;
+        padding: 35px 29px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5vh;
+        left: 5%;
+        width: 90%;
+        
+    }
+    #form-title-2 {
+        width: 192px;
+        margin-right: 57px;
+        font-size: 24px;
+    }
+    .form-subtitle {
+        font-size: 16px;
+        margin-right: 27px;
+    }
+    .fill-form {
+        gap: 10px;
+        margin-right: 30px;
+    }
+    .fill-form input {
+        width: 144px;
+    }
+    .btn-form {
+        width: 168px;
+        padding: 13px 0vw;
+        border-radius: 30px;
+        font-size: 16px;
+    }
+    
+       /*Footer*/
+    footer {
+        background-color: #222222;
+        color: #FFFFFF;
+        padding-top: 60px;
+        padding-bottom: 41px;   
+    }
+    #footer-title {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 61px;
+        align-items: center;
+    }
+    #footer-form {
+        display: flex;
+        justify-content: space-between;
+        gap: 3vw;
+        height: fit-content;
+        
+    }
+    #footer-logo {
+        width: 159px;
+        height: auto;
+    }
+    #footer-logo-img {
+        width: 100%;
+        height: 100%;
+    }
+    #footer-form-title {
+        font-weight: 300;
+        font-family: "Robbotic Light";
+        font-size: 16px;
+        text-align: left;
+        padding-top: 2%;
+    }
+    #footer-form-send {
+        display: flex;
+        height: fit-content;
+        border: 1px solid #FFFFFF;
+        padding: 10px 17px;
+        border-radius: 30px;
+    }
+    #footer-form-send input {
+        background-color: #222222;
+        border: none;
+    }
+    #footer-sections {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 0vw;
+        border-top: solid 1px #494949;
+        border-bottom: solid 1px #494949;
+    }
+    #footer-sections a {
+        color: #FFFFFF;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 300;
+        font-family: "Robbotic Light";
+    }
+    #footer-society {
+        display: flex;
+        justify-content: space-between;
+        padding: 36px 256px;
+    }
+    #footer-bottom {
+        text-align: center;
+        color: #525252;
+        font-size: 16px;
+        font-weight: 300;
+        font-family: "Robbotic Light";
+    }
+    
+
+ 
+}
+
+
+@media screen and (max-width: 426px) and (min-width: 320px) {
+    ::placeholder {
+        font-size: 3vw;
+        
+        padding-left: 2%;
+        padding-bottom: 1%;
+    }
+    
+    /*Header*/
+    header {
+        padding: 1vh 4vw; 
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    /*Header company-logo*/
+    #company-logo {
+        width: 30vw;
+        height: auto;
+    }
+    #company-logo-image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    /*Header menu-section*/
+    #menu-sections {
+        display: none;
+    }
+    #menu-sections::-webkit-scrollbar {
+        display: none;
+    }
+    /*Header response section*/
+    #response {
+        display: none
+    }
+    /*Header menu*/
+    #main-menu {
+        padding: 2vh 1.1vw;
+    }
+    
+    .menu {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .menu-button {
+        cursor: pointer;
+        display: inline-block;
+    }
+    
+    #menu-toggle {
+        display: none;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: fixed;
+        top: 40px;
+        left: 0;
+        width: 100vw;
+        background-color: #FFFFFF;
+        color: #000000;
+        padding: 3%;
+        list-style: none;
+        box-sizing: border-box;
+        z-index: 1000;
+    }
+    .content-menu {
+        display: block;
+        font-size: 3vw;
+        padding: 2%;
+        
+    }
+    
+    #menu-toggle:checked + .menu-button + .dropdown-content {
+        display: block;
+    }
+    .content-menu span {
+        padding: 1%;
+        font-size: 4vw;
+    }
+    
+    .dropdown-content ul {
+        text-decoration: none;
+        display: grid;
+        padding: 3%;
+        font-size: 3vw;
+        grid-template-columns: repeat(2, 30%);
+
+    }
+    
+    .dropdown-content li a:hover {
+        background: #ddd;
+    }
+    .on-mobile {
+        display: block;
+        display: flex;
+        padding: 5% 2%;
+        border-top: solid 1px #6A6A6A;
+        justify-content: space-between;
+    }
+    .on-mobile button {
+        background-color: #FFFFFF;
+        border: solid 1px #6A6A6A;
+        color: #000000;
+        font-family: "Robbotic Regular";
+        font-size: 3vw;
+        font-weight: 500;
+        border-radius: 2vh;
+        padding: 1% 2%; 
+            
+    }
+    .mobile-image-block {
+        display: flex;
+        gap: 5%;
+    }
+    /*Main*/
+    /*Section-title*/
+    #title {
+        min-height: 100vh;
+        padding: 6vh 10vw;
+        background-position: center;
+        min-height: 60vh;
+        
+    }
+    
+    #title h1 {
+        font-size: 10.5vw;
+        padding-bottom: 2vh;
+    }
+    
+    #title h3 {
+        font-size: 4vw;
+        padding-bottom: 2vh;
+    }
+    
+    #choice {
+        background-color: #FFFFFF;
+        width: 100%;
+        height: fit-content;
+        margin-top: 5vh;
+        padding: clamp(1vh, 2vh, 2vh) clamp(0.5vw, 0.6vw, 1vw); /* clamp для padding */
+        border-radius: 3vh;
+        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    
+    .input-group-dropdown  {
+        border-right: none;
+        border-top: none;
+        border-bottom: solid 1px #D4D4D4;
+        border-left: none;
+        height: clamp(3vh, 6vh, 8vh); 
+        width: 90%; 
+        
+    }
+
+   
+    #title-img {
+        height: 5%;
+    }
+    
+    #btn-choice {
+        background-color: #EC1C24;
+        color: #FFFFFF;
+        width: 80%;
+        
+        border: none;
+        border-radius: 6vh;
+        justify-content: center;
+        align-items: center;
+        font-family: "Robbotic Regular";
+        font-size: clamp(4vw, 4.2vw, 4.4vw); 
+        font-weight: 500;
+    }
+    
+    #btn-choice-image {
+        width: 11px;
+        height: 11px;
+        margin-left: 1vw;
+    }
+    
+    .display-on-laptop {
+        display: none;
+    }
+
+    
+    /*Popular tours*/
+    #popular-tour {
+        padding: 30% 0% 20% 6%;
+        position: relative;
+    }
+    #popular-tour h3 {
+        color: #1C1C1C;
+        font-weight: 500;
+        font-family: "Robbotic Regular";
+        font-size: 7.9vw;
+        text-align: center;
+    }
+    #popular-tour h4 {
+        color: #1C1C1C;
+        font-weight: 300;
+        font-family: "Robbotic Light";
+        font-size: 4.5vw;
+        text-align: center;
+    }
+    #popular-tour-section {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        background-color: #FFFFFF;
+        scrollbar-width: thin;
+        margin-top: 8%;
+        padding-bottom: 5%;
+    }
+    #popular-tour-section::-webkit-scrollbar {
+        display: none;
+    }
+    .card-tours {
+        width: 248px;
+    }
+    .tag.price {
+        right: 60px;
+    }
+    
+    /*section popular hotels*/
+    #popular-hotels {
+        background-color: #F8F8F8;
+        padding: 40% 6% 20% ;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #popular-hotels h3 {
+        color: #1C1C1C;
+        font-weight: 500;
+        font-family: "Robbotic Regular";
+        font-size: 7.9vw;
+        text-align: center;
+    }
+    #popular-hotels h4 {
+        color: #1C1C1C;
+        font-weight: 300;
+        font-family: "Robbotic Light";
+        font-size: 4.5vw;
+        text-align: center;
+    }
+    #popular-hotels-section {
+        display: flex;
+        overflow-x: none;
+        white-space: none;
+        background-color: #F8F8F8;
+        scrollbar-width: none;
+        margin-top: 10%;
+        padding-bottom: 8%;
+        
+        flex-direction: column;
+    }
+    .hotel-card {
+        position: relative;
+        flex: 0 0 auto;
+        
+        border-radius: 30px;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: flex-end;
+        color: #FFFFFF;
+    }
+      
+      
+    .hotel-info {
+        
+        z-index: 1;
+        padding: 30px;
+        width: 100%;
+    }
+      
+    .hotel-name {
+        font-size: 20px;
+        margin-bottom: 2px;
+        font-weight: 500;
+        font-family: "Robbotic Regular";
+    }
+      
+    .hotel-link {
+        font-family: "Robbotic Light";
+        font-size: 14px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-weight: 300;
+    }
+    .card-img-line {
+        width: 22px;
+    }
+      
+    .rating {
+        position: absolute;
+        top: 28px;
+        right: 20px;
+        z-index: 2;
+        display: flex;
+    }
+    .rating h5 {
+        
+        font-size: 48px;
+        font-weight: 300;
+       
+    }
+    .star-img-card {
+        top: 0px;
+        height: 21px;
+        width: 20px;
+    }
+   
+    .hidden-on-laptop {
+        background-color: #FFFFFF;
+        color: #000000;
+        display: block;
+        border: solid 1px #000000;
+        font-size: 4.5vw;
+        padding: 3% 6%;
+        border-radius: 4vh;
+        font-family: "Robbotic Regular";
+        font-weight: 500;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    /*Section Form*/
+    #section-form {
+        background-image: url(./assets/images/valeria-andersson-0IGhARplNzY-unsplash\ 1.jpg);
+        background-size: cover; 
+        background-position: center;        
+        background-repeat: no-repeat; 
+        width: 100%;
+        
+        height: auto;
+        position: relative;
+    }
+    #form-1 {
+        background-color: #FFFFFF;
+        top: 10%;
+        position: absolute;
+        width: 90%;
+        height: auto;
+        padding: 15% 5%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 3vh;
+        left: 5%;
+        text-align: center;
+    
+    }
+    #form-title-1 {
+        color: #1C1C1C;
+        font-weight: 400;
+        font-size: 7vw;
+        font-family: "Robbotic Regular";
+        width: 85%;
+        margin-right: 0%;
+        
+        
+    }
+    .form-subtitle {
+        color: #1C1C1C;
+        font-weight: 300;
+        font-size: 4.5vw;
+        font-family: "Robbotic Light";
+        padding-top: 5%;
+        padding-bottom: 5%;
+        
+    }
+    .fill-form {
+        display: flex;
+        flex-direction: column;
+        gap: 3.5vh;
+        margin-right: 3.81vw;
+    }
+    .fill-form input {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: solid 1px #848484;
+        width: 110%;
+    }
+    .btn-form {
+        background-color: #EC1C24;
+        color: #FFFFFF;
+        width: 80%;
+        padding: 5%;
+        border: none;
+        border-radius: 6vh;
+        justify-content: center;
+        align-items: center;
+        font-family: "Robbotic Regular";
+        font-size: clamp(4vw, 4.2vw, 4.4vw); /* адаптивный размер шрифта */
+        font-weight: 500;
+        margin-top: 10%;
+    }
+    .btn-form-image {
+        
+        height: auto;
+        margin-left: 1vw;
+    }
+    /*Section feedbacks*/
+    #feedback {
+        background-color: #FFFFFF;
+        padding: 40% 6% 20% ; /* Use calc() to make padding responsive */
+        position: relative;
+    
+    }
+    #feedback h3 {
+        color: #1C1C1C;
+        font-weight: 500;
+        font-family: "Robbotic Regular";
+        font-size: 7.9vw;
+        text-align: center;
+    }
+    #feedback h4 {
+        color: #1C1C1C;
+        font-weight: 300;
+        font-family: "Robbotic Light";
+        font-size: 4.5vw;
+        text-align: center;
+    }
+    #feedback-section {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: thin;
+        background-color: #FFFFFF;
+        margin-top: 11vh;
+        padding-bottom: 9.7vh;
+        padding-left: 20.85vw;
+    
+    }
+    #feedback-section img {
+        width: 80%;
+        height: 100%;
+        margin-right: 1.7vw;
+    }
+    
+    .display-on-laptop {
+        display: none;
+    }
+    .display-on-small {
+        display: none;
+    }
+    /*Section news*/
+    #news {
+        background-color: #F8F8F8;
+        padding: 40% 6% 20% ;
+        position: relative;
+        padding-left: 13%;
+        padding-right: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #news h3 {
+        color: #1C1C1C;
+        font-weight: 500;
+        font-family: "Robbotic Regular";
+        font-size: 7.9vw;
+        text-align: center;
+    }
+    
+    #news h4 {
+        color: #1C1C1C;
+        font-weight: 300;
+        font-family: "Robbotic Light";
+        font-size: 4.5vw;
+        text-align: center;
+    }
+    
+    .news-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3%;
+        margin-top: 7%;
+        margin-bottom: 7%;
+        
+        
+        
+    }
+    
+   
+    
+    
+    .news-section img:nth-child(1) { order: 0; }
+    .news-section img:nth-child(2) { order: 0; }
+    .news-section img:nth-child(3) { order: 0; }
+    .news-section img:nth-child(4) { order: 0; }
+    .news-section img:nth-child(5) { order: 0; }
+    .news-section img:nth-child(6) { order: 0; }
+    .news-section img:nth-child(7) { order: 0; }
+
+    /*Section about*/
+    #we-image {
+        width: 30vw;
+        position: absolute;
+        top: 3.5%;
+        left: 35%;
+    }
+    #about-us {
+        padding-left: 6%;
+        padding-right: 6%;
+        padding-top: 40%;
+        padding-bottom: 20%;
+        
+        display: flex;
+        flex-direction: column;
+        
+    }
+    #about-us h3 {
+        color: #1C1C1C;
+        font-weight: 500;
+        font-family: "Robbotic Regular";
+        font-size: 7.9vw;
+        text-align: center;
+    }
+    #about-us-subtitle {
+        color: #1C1C1C;
+        font-weight: 300;
+        font-family: "Robbotic Light";
+        font-size: 4.5vw;
+        text-align: center; 
+    }
+    .text {
+        font-weight: 300;
+        font-family: "Robbotic Light";
+        font-size: 4.5vw;
+        display: block;
+        width: 100%;
+        position: static;
+        padding-top: 3%;
+        padding-bottom: 5%;
+    }
+    
+    
+    .text-1 strong {
+        
+        font-size:15vw;
+        
+        font-weight: 400;
+        line-height: 1;
+        flex-shrink: 0;
+        display: inline-block;
+        
+    }
+    #text-about-us {
+        display: flex;
+        
+        height: auto;
+        display: block;
+        
+        
+        
+    }
+    #about-us-img-1 {
+        
+        display: block;
+        position: static;
+        border-radius: 30px;
+        padding-bottom: 5%;
+    }
+    #about-us-img-1 img {
+        border-radius: 30px;
+    }
+    .phones {
+        width: 100%;
+        border-radius: 3vh;
+    }
+    .laptops {
+        display: none;
+    }
+    /*Section about contacts*/
+    #contacts {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        margin-top: 63px;
+        padding: 5% 6% 10%;
+        align-items: center;
+        text-align: center;
+        border-top: solid 1px #D4D4D4;
+        border-bottom: solid 1px #D4D4D4;
+        display: flex;
+        flex-direction: column;
+    }
+    .contacts-cards {
+        position: relative;
+        padding-bottom: 10%;
+    }
+    .contacts-cards h4 {
+        font-weight: 500;
+        color: #1C1C1C;
+        font-size: 7.5vw;
+        font-family: "Robbotic Regular";
+        margin-bottom: 8%;
+    }
+    .contacts-cards p {
+        font-weight: 300;
+        font-family: "Robbotic Light";
+        font-size: 4.5vw;
+        margin-bottom: 5%;
+        
+    }
+    .contacts-cards:nth-child(2)::before,
+    .contacts-cards:nth-child(2)::after {
+      display: none;
+    }
+    
+    
+    .social-icons-img {
+        width: 30%;
+        height: 30%;
+        
+    }
+    /*section send form*/
+    #form-send {
+        background-image: url(./assets/images/Group\ 9.jpg);
+        background-size: cover; 
+        background-position: center;        
+        background-repeat: no-repeat; 
+        width: 100%;
+        
+        height: auto;
+        position: relative;
+    }
+    #form-2 {
+        background-color: #FFFFFF;
+        
+        position: absolute;
+        
+        width: 90%;
+        padding: 15% 0%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3vh;
+        left: 5%;
+        text-align: center;
+        
+        
+    }
+    #form-title-2 {
+        color: #1C1C1C;
+        font-weight: 400;
+        font-size: 7vw;
+        font-family: "Robbotic Regular";
+        text-align: center;
+        margin-right: 0%;
+        width: 80%;
+        
+        
+    }
+    .form-subtitle {
+        color: #1C1C1C;
+        font-weight: 300;
+        font-size: 4.5vw;
+        font-family: "Robbotic Light";
+        padding-top: 5%;
+        padding-bottom: 5%;
+        text-align: center;
+        margin-right: 0%;
+        
+    }
+    .fill-form {
+        display: flex;
+        flex-direction: column;
+        gap: 3.5vh;
+        margin-right: 0vw;
+    }
+    .fill-form input {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: solid 1px #848484;
+        width: 110%;
+    }
+    .btn-form {
+        background-color: #EC1C24;
+        color: #FFFFFF;
+        width: 70%;
+        padding: 5%;
+        border: none;
+        border-radius: 6vh;
+        justify-content: center;
+        align-items: center;
+        font-family: "Robbotic Regular";
+        font-size: clamp(4vw, 4.2vw, 4.4vw); /* адаптивный размер шрифта */
+        font-weight: 500;
+        margin-top: 10%;
+    }
+    .btn-form-image {
+        
+        height: auto;
+        margin-left: 1vw;
+    }
+    /*Footer*/
+    footer {
+        background-color: #222222;
+        color: #FFFFFF;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 5%;
+        padding-bottom: 5%;  
+        display: flex;
+        flex-direction: column;
+    }
+    #footer-title {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 5%;
+        flex-direction: column;
+        
+    }
+    #footer-form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-top: solid 1px #494949;
+        height: fit-content;
+        width: 100%;
+        
+        
+    }
+    #footer-logo {
+        width: 35%;
+        height: auto;
+        margin-bottom: 8%;
+    }
+    #footer-logo-img {
+        width: 100%;
+        height: 100%;
+    }
+    #footer-form-title {
+        font-weight: 300;
+        font-family: "Robbotic Light";
+        font-size: 4.5vw;
+        padding-top: 8%;
+        text-align: center;
+    }
+    #footer-form-send {
+        display: flex;
+        height: fit-content;
+        border: 1px solid #FFFFFF;
+        padding: 10px 18px;
+        border-radius: 30px;
+        
+        width: fit-content;
+    }
+    
+    #footer-form-send input {
+        background-color: #222222;
+        border: none;
+    }
+    #footer-sections {
+        display: grid;
+        grid-template-columns: repeat(2, 40%);
+        padding: 10% 8% 20%;
+        border-top: solid 1px #494949;
+        border-bottom: solid 1px #494949;
+        gap: 20%;
+        text-align: center;
+    }
+    #footer-sections a {
+        color: #FFFFFF;
+        text-decoration: none;
+        font-size: 3.5vw;
+        font-weight: 300;
+        font-family: "Robbotic Light";
+
+    }
+    #footer-society {
+        display: flex;
+        justify-content: space-between;
+        padding: 8% 6%;
+        border-bottom: solid 1px #494949;
+    }
+    #footer-bottom {
+        text-align: center;
+        color: #525252;
+        font-size: 3.5vw;
+        font-weight: 300;
+        font-family: "Robbotic Light";
+        padding: 10% 1%;
+    } 
+   .phones {
+    display: block;
+   }
+   .dropdown-content-2 {
+    width: 360px;
+    height: 500px;
+    overflow: auto;
+    flex-direction: column;
+
+
+   }
+   .dropdown-main-2 {
+    width: 360px;
+    height: 500px;
+    overflow: auto;
+    flex-direction: column;
+
+   }
+
+
+}
+
+@media  screen and (max-width: 426px) {
+
+    .dropdown-section-2 {
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+        overflow: auto;
+        padding: 40px;
+        justify-content: center;
+       
+    }
+    .dropdown-content-2 {
+        width: 360px;
+        margin-right: 20px;
+        top: 8%;
+        left: 10%;
+        right: 10%;
+        
+        
+        
+        
+    }
+    .dropdown-main-2 {
+        width: 360px;
+        margin-left: 20px;
+        top: 8%;
+        left: 10%;
+        right: 10%;
+        
+       
+    }
+    
+   
+    
+    
+    
+    #tour-image {
+        top: 8%;
+        width: 135px;
+    }
+    #btn-coice input {
+        width: 200px;
+    }
+    #hotels {
+        top: 5.5%;
+        width: 135px;
+        left: 35%;
+    }
+    
+    #section-form {
+        min-height: 90vh;
+        max-height: 100vh;
+    }
+    .btn-form-image {
+        width: 14px;
+    }
+    .hotel-card {
+        width: 360px;
+        height: 280px;
+    }
+    #reviews {
+        width: 170px;
+        top: 16.5%;
+        left: 30%;
+    }
+
+    #news-image {
+        position: absolute;
+        width: 150px;
+        top: 7%;
+        left: 34%;
+        
+    }
+    .news-section img {
+        width: 360px;
+        height: 320px;
+        margin-bottom: 30px;
+        
+    }
+    #form-send {
+        min-height: 100vh;
+        max-height: 120vh;
+            
+        
+    }
+    #form-2 {
+        top: 8%;
+    }
+
+    #about-us-img-1 {
+        width: 375px;
+        height: auto;
+    }
+    .input-group-dropdown {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        display: flex;
+        
+    }
+    .input-group-dropdown:nth-child(4),
+    .input-group-dropdown:nth-child(5) {
+        width: 151px; 
+        margin-bottom: 20px;
+        
+    }
+    .dropdown-content-3 {
+        width: 360px;
+        left: 10%;
+    }
+    .dropdown-main-3 {
+        width: 360px;
+        left: 10%;
+    }
+   
+}
+
+@media  screen and (max-width: 376px) {
+    #tour-image {
+        top: 6.5%;
+        width: 130px;
+    }
+    #hotels {
+        top: 5%;
+        width: 130px;
+        left: 33%;
+    }
+    
+    .btn-form-image {
+        width: 12px;
+    }
+    #section-form {
+        min-height: 80vh;
+        max-height: 90vh;
+    }
+    .hotel-card {
+        width: 320px;
+        height: 250px;
+    }
+    #reviews {
+        width: 150px;
+        top: 16.5%;
+        left: 30%;
+    }
+    #news-image {
+        position: absolute;
+        width: 140px;
+        top: 7.5%;
+        left: 32%;
+        
+    }
+    .news-section img {
+        width: 320px;
+        height: 250px;
+        margin-bottom: 30px;
+        
+    }
+    #form-send {
+        min-height: 90vh;
+        max-height: 120vh;
+            
+        
+    }
+    #form-2 {
+        top: 8%;
+    }
+    #about-us-img-1 {
+        width: 330px;
+        height: auto;
+    }
+    .input-group-dropdown:nth-child(4),
+    .input-group-dropdown:nth-child(5) {
+        width: 135px; 
+        margin-bottom: 20px;
+        
+    }
+    .dropdown-content-2 {
+        left: 5px;
+        right: 5px;
+    }
+    .dropdown-content-3 {
+        left: 5px;
+        right: 5px;
+    }
+
+}
+
+@media  screen and (max-width: 320px) {
+    #tour-image {
+        top: 5%;
+        width: 120px;
+        left: 35%;
+    }
+    #hotels {
+        top: 4.5%;
+        width: 120px;
+        left: 33%;
+    }
+    
+    .btn-form-image {
+        width: 11px;
+    }
+    #section-form {
+        min-height: 70vh;
+        max-height: 80vh;
+    }
+    .hotel-card {
+        width: 271px;
+        height: 220px;
+    }
+    .hotel-name {
+        font-size: 18px;
+    }
+    .hotel-link {
+        font-size: 12px;
+    }
+    .hotel-card h5 {
+        font-size: 34px;
+    }
+    .star-img-card {
+        width: 16px;
+        height: 17px;
+    }
+    #reviews {
+        width: 140px;
+        top: 15%;
+        left: 30%;
+    }
+    #news-image {
+        position: absolute;
+        width: 120px;
+        top: 7%;
+        left: 34%;
+        
+    }
+    .news-section img {
+        width: 265px;
+        height: 220px;
+        margin-bottom: 30px;
+        
+    }
+    #form-send {
+        min-height: 80vh;
+        max-height: 120vh;
+            
+        
+    }
+    #form-2 {
+        top: 9%;
+    }
+
+    #about-us-img-1 {
+        width: 280px;
+        height: auto;
+    }
+    #btn-choice-image {
+        width: 10px;
+        height: 10px;
+    }
+    .input-group-dropdown:nth-child(4),
+    .input-group-dropdown:nth-child(5) {
+        width: 110px; 
+        margin-bottom: 10px;
+        
+    }
+    .dropdown-content-2 {
+        left: 0px;
+        right: 0px;
+        width: 320px;
+    }
+    .dropdown-main-2 {
+        left: 0px;
+        right: 0px;
+        width: 320px;
+    }
+    .dropdown-content-3 {
+        left: 0px;
+        right: 0px;
+        width: 320px;
+    }
+    .dropdown-main-3 {
+        width: 320px;
+    }
+
+
+   
+
+
+    
+}
+
+@media  screen and (max-width: 769px) and (min-width: 427px) {
+    #title {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #company-logo-image {
+        width: 100px;
+    }
+    #menu-sections {
+        margin-left: 30px;
+        margin-right: 30px;
+        
+    }
+
+    #menu-sections a {
+        font-size: 12px;
+    }
+
+    #response-btn {
+        padding: 10px 13px;
+        width: 150px;
+        font-size: 12px;
+    }
+    #call-image {
+        width: 24px;
+        height: 24px;
+    }
+    #location-image {
+        width: 24px;
+        height: 24px;
+    }
+    #response {
+        gap: 1.5vw;
+    }
+    #choice {
+        padding: 10px 12px;
+    }
+    .context-dropdown ul {
+        min-width: 180px;
+
+    }
+    .text-1{
+        width: 300px;
+    }
+    .text-2 {
+        width: 200px;
+    }
+    .text-3 {
+        width: 200px;
+    }
+    #about-us-img-1 {
+        width: 350px;
+        top: 15%;
+    }
+    #about-us-img-2 {
+        width: 250px;
+        height: 260px;
+    }
+    #text-about-us {
+        height: 790px;
+    }
+    .text {
+        font-size: 14px;
+    }
+
+    #tour-image {
+        left: 55%;
+        
+    }
+    #form-title-1 {
+        font-size: 18px;
+        
+        margin-right: 35px;
+    }
+    .form-subtitle {
+        font-size: 12px;
+        margin-right: 40px;
+    }
+    .fill-form input {
+        width: 130px;
+    }
+    .btn-form {
+        font-size: 12px;
+        padding: 10px 0px;
+    }
+    .btn-form-image {
+        width: 9px;
+        height: 9px;
+    }
+    #form-title-2 {
+        font-size: 18px;
+    }
+    #reviews {
+        width: 200px;
+        top: 15%;
+    }
+    .news-section img {
+        height: 200px;
+       
+    }
+    .news-section {
+        gap: 20px;
+    }
+    #news-image {
+        width: 180px;
+        left: 55%;
+        top: 12%;
+    }
+    #we-image {
+        width: 150px;
+        top: 4%;
+        left: 40%;
+    }
+    .contacts-cards p {
+        font-size: 12px;
+    }
+    .contacts-cards h4 {
+        font-size: 22px;
+    }
+    #footer-logo-img {
+        width: 145px;
+    }
+    #footer-form-title {
+        font-size: 12px;
+    }
+    #footer-form-send {
+        padding: 10px 20px;
+    }
+    #footer-sections a {
+        font-size: 12px;
+    }
+    #footer-society {
+        padding: 36px 170px;
+    }
+    .input-group-dropdown input {
+        width: 50px;
+    }
+    .input-group-dropdown {
+        width: 110px;
+    }
+    .input-group-dropdown label {
+        width: 80px;
+    }
+}
+
+
+
+
+
+
