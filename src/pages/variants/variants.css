@@ -2239,12 +2239,15 @@ footer {
         padding: 20px 20px;
         align-items: center;
         justify-content: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
-    #choice input {
+    .input-group-dropdown {
         width: 250px;
     }
-    #choice input:nth-child(4),
-    #choice input:nth-child(5) {
+    .input-group-dropdown:nth-child(4),
+    .input-group-dropdown:nth-child(5) {
         width: 120px; 
         
         
@@ -2273,9 +2276,14 @@ footer {
     #form-2 {
         top: 10%;
     }
+   
+   
+    .input-group-dropdown {
+        width: 250px;
+    }
     .input-group-dropdown:nth-child(4),
     .input-group-dropdown:nth-child(5) {
-        width: 135px; 
+        width: 120px; 
         margin-bottom: 20px;
         
     }
@@ -2314,9 +2322,12 @@ footer {
         align-items: center;
         justify-content: center;
     }
+    .input-group-dropdown {
+        width: 250px;
+    }
     .input-group-dropdown:nth-child(4),
     .input-group-dropdown:nth-child(5) {
-        width: 110px; 
+        width: 100px; 
         margin-bottom: 10px;
         
     }
@@ -2353,6 +2364,10 @@ footer {
     }
     #choice input {
         width: 90px;
+    }
+    #title {
+        padding-left: 20px;
+        padding-right: 20px;
     }
     #company-logo-image {
         width: 100px;
@@ -2532,6 +2547,15 @@ footer {
     .card:nth-of-type(2) .season,
     .card:nth-of-type(5) .season {
        margin-left: 15px; 
+    }
+    .input-group-dropdown input {
+        width: 50px;
+    }
+    .input-group-dropdown {
+        width: 110px;
+    }
+    .input-group-dropdown label {
+        width: 80px;
     }
     
 
